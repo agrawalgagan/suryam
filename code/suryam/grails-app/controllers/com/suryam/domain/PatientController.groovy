@@ -109,6 +109,6 @@ class PatientController {
 
     def search(PatientSearch search){
         List<Patient> patients = Patient.search(search)
-        respond patients, model:[patientInstanceList: patients, patientSearch:search, view : "search"]
+        respond patients, model:[patientInstanceList: patients, patientSearch:search, patientInstanceCount: 2]
     }
 }

@@ -38,6 +38,9 @@ class BootStrap {
         if (!gagan) {
             new Patient(firstName: "Gagan", lastName: "Agrawal", dob: new Date(), gender: Gender.MALE, email: "gagan@gmail.com", address: "Gurgaon", phone: "9999999999").save(flush: true)
             new Patient(firstName: "Swati", lastName: "Goel", dob: new Date(), gender: Gender.FEMALE, email: "swati@gmail.com", address: "Gurgaon", phone: "8888888888").save(flush: true)
+            for(i in 0..30){
+                new Patient(firstName: "Patient${i}", dob: new Date(), gender: Gender.MALE, email: "patient${i}@gmail.com", address: "Gurgaon", phone: "${i}${i}${i}${i}${i}", height: 5.9, weight: 70.8).save(flush: true)
+            }
         }
     }
 

@@ -80,7 +80,7 @@
         </tbody>
     </table>
     <div class="pagination">
-        <g:paginate total="${patientInstanceCount ?: 0}" />
+        <g:paginate total="${patientInstanceList?.totalCount ?: 0}" max="${com.suryam.util.Constants.DEFAULT_MAX_PAGE_SIZE}"/>
     </div>
 </div>
 </body>
