@@ -6,7 +6,7 @@ package com.suryam.search
  * Date: 9/23/14
  * Time: 9:23 AM
  */
-class PatientSearch {
+class PatientSearch extends BaseSearch{
     String firstName
     String lastName
     String phone

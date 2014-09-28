@@ -34,7 +34,8 @@ class Patient {
     }
 
     def static List<Patient> search(PatientSearch search){
-        return Patient.withCriteria {
+        def criteria = Patient.createCriteria()
+        return criteria.list(search.paramMap) {
             if(search.firstName)
                 ilike("firstName","${search.firstName}%")
             if(search.lastName)

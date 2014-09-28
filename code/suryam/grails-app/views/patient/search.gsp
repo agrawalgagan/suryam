@@ -57,7 +57,7 @@
         <thead>
         <tr>
 
-            <g:sortableColumn property="name" title="${message(code: 'patient.name.label', default: 'Name')}" />
+            <g:sortableColumn property="firstName" title="${message(code: 'patient.name.label', default: 'Name')}" />
             <g:sortableColumn property="gender" title="${message(code: 'patient.gender.label')}" />
             <g:sortableColumn property="dob" title="${message(code: 'patient.dob.label')}" />
             <g:sortableColumn property="phone" title="${message(code: 'patient.phone.label', default: 'Phone')}" />
