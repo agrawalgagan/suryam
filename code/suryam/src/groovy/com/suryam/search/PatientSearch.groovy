@@ -9,5 +9,5 @@ package com.suryam.search
 class PatientSearch {
     String firstName
     String lastName
-
+    String phone
 }

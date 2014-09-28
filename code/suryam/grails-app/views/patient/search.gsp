@@ -27,19 +27,19 @@
                 <label for="name">
                     <g:message code="patient.firstName.label" default="First Name" />
                 </label>
-                <g:textField name="name" value="${patientInstance?.firstName}"/>
+                <g:textField name="firstName" value="${patientSearch?.firstName}"/>
             </div>
             <div class="fieldcontain">
                 <label for="lastName">
                     <g:message code="patient.lastName.label" default="Last Name" />
                 </label>
-                <g:textField name="lastName" value="${patientInstance?.lastName}"/>
+                <g:textField name="lastName" value="${patientSearch?.lastName}"/>
             </div>
             <div class="fieldcontain">
                 <label for="phone">
                     <g:message code="patient.phone.label" default="Phone" />
                 </label>
-                <g:textField name="phone" value="${patientInstance?.phone}"/>
+                <g:textField name="phone" value="${patientSearch?.phone}"/>
             </div>
         </fieldset>
         <fieldset class="buttons">

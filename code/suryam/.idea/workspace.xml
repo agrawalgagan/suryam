@@ -8,16 +8,16 @@
     <file path="/Doctor.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411316161118" ignored="false" />
     <file path="/a.dummy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411896470062" ignored="false" />
     <file path="/Dummy.txt" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411891894198" ignored="false" />
-    <file path="/index.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411897335262" ignored="false" />
+    <file path="/index.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411919991499" ignored="false" />
     <file path="/main.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411316750418" ignored="false" />
     <file path="/SmsService.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411323655361" ignored="false" />
     <file path="/fragment.java" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411320674477" ignored="false" />
     <file path="/DoctorController.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411742316147" ignored="false" />
     <file path="$PROJECT_DIR$/target/stacktrace.log" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411833775197" ignored="false" />
-    <file path="/show.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411894277798" ignored="false" />
+    <file path="/show.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411921218717" ignored="false" />
     <file path="/DataSource.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411399134474" ignored="false" />
-    <file path="/PatientController.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411897122148" ignored="false" />
-    <file path="/PatientSearch.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411896623723" ignored="false" />
+    <file path="/PatientController.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411921177090" ignored="false" />
+    <file path="/PatientSearch.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411920162543" ignored="false" />
     <file path="/Patient.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411896463429" ignored="false" />
     <file path="/*.regexp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411833138104" ignored="false" />
     <file path="/messages.properties" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411445788037" ignored="false" />
@@ -30,9 +30,12 @@
     <file path="/Config.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411834952632" ignored="false" />
     <file path="/UserController.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411834433703" ignored="false" />
     <file path="/User.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411834374044" ignored="false" />
-    <file path="/edit.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411832512624" ignored="false" />
+    <file path="/edit.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411921233968" ignored="false" />
     <file path="/Gender.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411891488961" ignored="false" />
     <file path="/DateTagLib.groovy" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411894308489" ignored="false" />
+    <file path="$PROJECT_DIR$/target/work/web.xml.tmp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411920264475" ignored="false" />
+    <file path="/search.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411920575813" ignored="false" />
+    <file path="/create.gsp" changelist="1c37bcbd-5b00-47d8-b041-97ad8cc9bcea" time="1411921246551" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +51,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/PatientController.groovy" line="102" class="com.suryam.domain.PatientController" package="com.suryam.domain">
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/PatientController.groovy" line="104" class="com.suryam.domain.PatientController" package="com.suryam.domain">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -116,16 +119,16 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="22" selection-start="849" selection-end="849" vertical-scroll-proportion="-8.583333">
+            <state line="35" column="49" selection-start="897" selection-end="897" vertical-scroll-proportion="-5.3125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gender.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/Gender.groovy">
+      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="10" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
+            <state line="109" column="30" selection-start="2908" selection-end="2908" vertical-scroll-proportion="-8.423077">
               <folding />
             </state>
           </provider>
@@ -134,7 +137,7 @@
       <file leaf-file-name="PatientController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/PatientController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="76" selection-start="3245" selection-end="3245" vertical-scroll-proportion="-4.9583335">
+            <state line="16" column="57" selection-start="496" selection-end="496" vertical-scroll-proportion="-5.5625">
               <folding>
                 <element signature="e#27#65#0" expanded="true" />
               </folding>
@@ -142,10 +145,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.gsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/patient/index.gsp">
+      <file leaf-file-name="search.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/patient/search.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="79" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.6357143">
+            <state line="31" column="56" selection-start="1365" selection-end="1365" vertical-scroll-proportion="-2.6530612">
               <folding />
             </state>
           </provider>
@@ -154,7 +157,7 @@
       <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/patient/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="95" selection-start="3049" selection-end="3049" vertical-scroll-proportion="-2.0">
+            <state line="14" column="55" selection-start="629" selection-end="629" vertical-scroll-proportion="-3.2162163">
               <folding />
             </state>
           </provider>
@@ -169,10 +172,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="create.gsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/patient/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="12" column="55" selection-start="585" selection-end="585" vertical-scroll-proportion="0.6035503">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/patient/edit.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="55" selection-start="628" selection-end="628" vertical-scroll-proportion="-4.5102043">
               <folding />
             </state>
           </provider>
@@ -190,19 +202,8 @@
       <file leaf-file-name="PatientSearch.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/suryam/search/PatientSearch.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="4" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+            <state line="11" column="16" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC2/grails-app/controllers/grails/plugin/springsecurity/ui/RoleController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="69" selection-start="3652" selection-end="3652" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -217,22 +218,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/DoctorController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/user/search.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/suryam/domain/admin/User.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/suryam/controller/admin/UserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/user/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/user/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/Gender.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/patient/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/patient/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/taglib/suryam/DateTagLib.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/suryam/domain/Patient.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/suryam/search/PatientSearch.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/PatientController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/patient/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
+        <option value="$PROJECT_DIR$/src/groovy/com/suryam/search/PatientSearch.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/patient/search.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/suryam/domain/Patient.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/PatientController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/patient/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/patient/edit.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/patient/create.gsp" />
       </list>
     </option>
   </component>
@@ -564,6 +565,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\project\suryam\code\suryam\grails-app\views\patient" />
       <recent name="F:\project\suryam\code\suryam\lib" />
       <recent name="F:\project\suryam\code\suryam\grails-app\assets\images" />
       <recent name="F:\project\suryam\code\suryam\web-app\images" />
@@ -752,7 +754,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47838214" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25289574" sideWeight="0.75453275" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25289574" sideWeight="0.62343097" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -763,7 +765,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5076709" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24546723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37656903" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -840,25 +842,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/suryam/domain/admin/User.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="8" selection-start="545" selection-end="545" vertical-scroll-proportion="-3.7708333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/suryam/controller/admin/UserController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="99" selection-start="686" selection-end="686" vertical-scroll-proportion="-12.217391">
-          <folding>
-            <element signature="e#37#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/user/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="96" selection-start="1235" selection-end="1235" vertical-scroll-proportion="-5.2040815">
@@ -903,20 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/patient/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/patient/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="95" selection-start="3049" selection-end="3049" vertical-scroll-proportion="-2.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/taglib/suryam/DateTagLib.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="12" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
@@ -931,35 +900,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/suryam/domain/Patient.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="22" selection-start="849" selection-end="849" vertical-scroll-proportion="-8.583333">
+        <state line="109" column="30" selection-start="2908" selection-end="2908" vertical-scroll-proportion="-8.423077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/suryam/search/PatientSearch.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+        <state line="11" column="16" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/suryam/domain/Patient.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="49" selection-start="897" selection-end="897" vertical-scroll-proportion="-5.3125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/suryam/domain/PatientController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="76" selection-start="3245" selection-end="3245" vertical-scroll-proportion="-4.9583335">
+        <state line="16" column="57" selection-start="496" selection-end="496" vertical-scroll-proportion="-5.5625">
           <folding>
             <element signature="e#27#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/patient/index.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/patient/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="79" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.6357143">
+        <state line="13" column="55" selection-start="628" selection-end="628" vertical-scroll-proportion="-4.5102043">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/patient/search.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="56" selection-start="1365" selection-end="1365" vertical-scroll-proportion="-2.6530612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/patient/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="55" selection-start="629" selection-end="629" vertical-scroll-proportion="-3.2162163">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/patient/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="55" selection-start="585" selection-end="585" vertical-scroll-proportion="0.6035503">
           <folding />
         </state>
       </provider>

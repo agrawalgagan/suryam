@@ -28,9 +28,12 @@ class Patient {
 
     def static List<Patient> search(PatientSearch search){
         return Patient.withCriteria {
-            if(search.name!=null){
-                like("name",search.name+"%")
-            }
+            if(search.firstName)
+                ilike("firstName","${search.firstName}%")
+            if(search.lastName)
+                ilike("lastName","${search.lastName}%")
+            if(search.phone)
+                ilike("phone","${search.phone}%")
         }
 
     }

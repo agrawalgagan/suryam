@@ -13,9 +13,11 @@ class PatientController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        /*params.max = Math.min(max ?: 10, 100)
         println Patient.list(params)
-        respond Patient.list(params), model:[patientInstanceList: Patient.list(params), patientInstanceCount: Patient.count()]
+        respond Patient.list(params), model:[patientInstanceList: Patient.list(params), patientInstanceCount: Patient.count()]*/
+        search(new PatientSearch())
+        return
     }
 
     def show(Patient patientInstance) {
@@ -106,14 +108,7 @@ class PatientController {
     }
 
     def search(PatientSearch search){
-        println "hi.."
-        def criteria = Patient.createCriteria()
-        def list = criteria.list {
-            if(search.firstName)
-                ilike("firstName","%${search.firstName}")
-        }
-        println list
-        respond([model:[patientInstanceList: list],view: 'index'])
-        return
+        List<Patient> patients = Patient.search(search)
+        respond patients, model:[patientInstanceList: patients, patientSearch:search, view : "search"]
     }
 }

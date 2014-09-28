@@ -121,7 +121,7 @@
         <div id="page-body" role="main">
             <div><a href="user">Users</a></div>
             <div><a href="doctor">Doctors</a></div>
-            <div><a href="patient">Patients</a></div>
+            <div><a href="patient/search">Patients</a></div>
             <div><a href="logout">Logout</a></div>
         </div>
 	</body>
