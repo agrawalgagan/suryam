@@ -23,24 +23,31 @@
 
     <g:form url="[action:'search']" >
         <fieldset class="form">
-            <div>
+            <div class="fieldcontain">
                 <label for="name">
-                    <g:message code="patient.name.label" default="Name" />
+                    <g:message code="patient.firstName.label" default="First Name" />
                 </label>
-                <g:textField name="name" value="${patientInstance?.name}"/>
+                <g:textField name="name" value="${patientInstance?.firstName}"/>
             </div>
-            %{--<div>
+            <div class="fieldcontain">
+                <label for="lastName">
+                    <g:message code="patient.lastName.label" default="Last Name" />
+                </label>
+                <g:textField name="lastName" value="${patientInstance?.lastName}"/>
+            </div>
+            <div class="fieldcontain">
                 <label for="phone">
                     <g:message code="patient.phone.label" default="Phone" />
                 </label>
                 <g:textField name="phone" value="${patientInstance?.phone}"/>
-            </div>--}%
+            </div>
         </fieldset>
         <fieldset class="buttons">
             <g:submitButton name="create" class="save" value="${message(code: 'default.button.search.label', default: 'Search')}" />
         </fieldset>
     </g:form>
 </div>
+<br>
 <div id="list-patient" class="content scaffold-list" role="main">
     <h1><g:message code="default.list.label" args="[entityName]" /></h1>
     <g:if test="${flash.message}">

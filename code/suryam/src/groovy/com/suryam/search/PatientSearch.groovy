@@ -7,5 +7,7 @@ package com.suryam.search
  * Time: 9:23 AM
  */
 class PatientSearch {
-    String name
+    String firstName
+    String lastName
+
 }

@@ -1,5 +1,6 @@
 package com.suryam.domain
 
+import com.suryam.search.PatientSearch
 import grails.plugin.springsecurity.annotation.Secured
 
 import static org.springframework.http.HttpStatus.*
@@ -102,5 +103,17 @@ class PatientController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+    def search(PatientSearch search){
+        println "hi.."
+        def criteria = Patient.createCriteria()
+        def list = criteria.list {
+            if(search.firstName)
+                ilike("firstName","%${search.firstName}")
+        }
+        println list
+        respond([model:[patientInstanceList: list],view: 'index'])
+        return
     }
 }

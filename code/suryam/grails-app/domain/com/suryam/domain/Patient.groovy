@@ -34,4 +34,10 @@ class Patient {
         }
 
     }
+
+    String name(){
+        if(lastName)
+            firstName+" "+lastName
+        else firstName
+    }
 }
