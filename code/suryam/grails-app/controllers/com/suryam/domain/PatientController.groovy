@@ -1,7 +1,6 @@
 package com.suryam.domain
 
-import com.suryam.search.PatientSearch
-import org.springframework.security.access.annotation.Secured
+import grails.plugin.springsecurity.annotation.Secured
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -14,20 +13,19 @@ class PatientController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Patient.list(params), model: [patientInstanceCount: Patient.count()]
+        println Patient.list(params)
+        respond Patient.list(params), model:[patientInstanceList: Patient.list(params), patientInstanceCount: Patient.count()]
     }
 
     def show(Patient patientInstance) {
         respond patientInstance
     }
 
-    @Secured(['ROLE_PATIENT_WRITE'])
     def create() {
         respond new Patient(params)
     }
 
     @Transactional
-    @Secured(['ROLE_PATIENT_WRITE'])
     def save(Patient patientInstance) {
         if (patientInstance == null) {
             notFound()
@@ -35,11 +33,11 @@ class PatientController {
         }
 
         if (patientInstance.hasErrors()) {
-            respond patientInstance.errors, view: 'create'
+            respond patientInstance.errors, view:'create'
             return
         }
 
-        patientInstance.save flush: true
+        patientInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
@@ -50,13 +48,11 @@ class PatientController {
         }
     }
 
-    @Secured(['ROLE_PATIENT_WRITE'])
     def edit(Patient patientInstance) {
         respond patientInstance
     }
 
     @Transactional
-    @Secured(['ROLE_PATIENT_WRITE'])
     def update(Patient patientInstance) {
         if (patientInstance == null) {
             notFound()
@@ -64,23 +60,22 @@ class PatientController {
         }
 
         if (patientInstance.hasErrors()) {
-            respond patientInstance.errors, view: 'edit'
+            respond patientInstance.errors, view:'edit'
             return
         }
 
-        patientInstance.save flush: true
+        patientInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Patient.label', default: 'Patient'), patientInstance.id])
                 redirect patientInstance
             }
-            '*' { respond patientInstance, [status: OK] }
+            '*'{ respond patientInstance, [status: OK] }
         }
     }
 
     @Transactional
-    @Secured(['ROLE_PATIENT_WRITE'])
     def delete(Patient patientInstance) {
 
         if (patientInstance == null) {
@@ -88,14 +83,14 @@ class PatientController {
             return
         }
 
-        patientInstance.delete flush: true
+        patientInstance.delete flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Patient.label', default: 'Patient'), patientInstance.id])
-                redirect action: "index", method: "GET"
+                redirect action:"index", method:"GET"
             }
-            '*' { render status: NO_CONTENT }
+            '*'{ render status: NO_CONTENT }
         }
     }
 
@@ -105,12 +100,7 @@ class PatientController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'patient.label', default: 'Patient'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*' { render status: NOT_FOUND }
+            '*'{ render status: NOT_FOUND }
         }
-    }
-
-    def search(PatientSearch patientSearch){
-        List<Patient> patients = Patient.search(patientSearch)
-        respond patients, model: [patientInstanceCount: patients.size()], view : "index"
     }
 }
