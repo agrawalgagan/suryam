@@ -1,3 +1,5 @@
+import com.suryam.domain.Gender
+import com.suryam.domain.Patient
 import com.suryam.domain.admin.Role
 import com.suryam.domain.admin.RoleGroup
 import com.suryam.domain.admin.RoleGroupRole
@@ -28,8 +30,17 @@ class BootStrap {
 
         UserRoleGroup.create(testUser,adminGroup,true)
 
-
+        addPatients()
     }
+
+    private void addPatients() {
+        Patient gagan = Patient.findByFirstName("Gagan")
+        if (!gagan) {
+            new Patient(firstName: "Gagan", lastName: "Agrawal", dob: new Date(), gender: Gender.MALE, email: "gagan@gmail.com", address: "Gurgaon", phone: "9999999999").save(flush: true)
+            new Patient(firstName: "Swati", lastName: "Goel", dob: new Date(), gender: Gender.FEMALE, email: "swati@gmail.com", address: "Gurgaon", phone: "8888888888").save(flush: true)
+        }
+    }
+
     def destroy = {
     }
 }

@@ -16,6 +16,13 @@ class Patient {
     String phone
     String email
 
+    static mapping = {
+        firstName index:"firstName_idx"
+        lastName index:"lastName_idx"
+        phone index:"phone_idx"
+        email index:"email_idx"
+    }
+
     static constraints = {
         lastName nullable: true
         parentName nullable: true
@@ -38,7 +45,7 @@ class Patient {
 
     }
 
-    String name(){
+    String getName(){
         if(lastName)
             firstName+" "+lastName
         else firstName

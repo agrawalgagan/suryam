@@ -24,7 +24,7 @@
     <g:form url="[action:'search']" >
         <fieldset class="form">
             <div class="fieldcontain">
-                <label for="name">
+                <label for="firstName">
                     <g:message code="patient.firstName.label" default="First Name" />
                 </label>
                 <g:textField name="firstName" value="${patientSearch?.firstName}"/>
@@ -58,8 +58,10 @@
         <tr>
 
             <g:sortableColumn property="name" title="${message(code: 'patient.name.label', default: 'Name')}" />
-
+            <g:sortableColumn property="gender" title="${message(code: 'patient.gender.label')}" />
+            <g:sortableColumn property="dob" title="${message(code: 'patient.dob.label')}" />
             <g:sortableColumn property="phone" title="${message(code: 'patient.phone.label', default: 'Phone')}" />
+            <g:sortableColumn property="email" title="${message(code: 'patient.email.label')}" />
 
         </tr>
         </thead>
@@ -67,9 +69,11 @@
         <g:each in="${patientInstanceList}" status="i" var="patientInstance">
             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-                <td><g:link action="show" id="${patientInstance.id}">${fieldValue(bean: patientInstance, field: "firstName")}</g:link></td>
-
+                <td><g:link action="show" id="${patientInstance.id}">${fieldValue(bean: patientInstance, field: "name")}</g:link></td>
+                <td>${fieldValue(bean: patientInstance, field: "gender")}</td>
+                <td><sur:dob value="${patientInstance?.dob}"/></td>
                 <td>${fieldValue(bean: patientInstance, field: "phone")}</td>
+                <td>${fieldValue(bean: patientInstance, field: "email")}</td>
 
             </tr>
         </g:each>
