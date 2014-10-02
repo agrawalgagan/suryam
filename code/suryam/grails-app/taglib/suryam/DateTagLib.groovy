@@ -1,5 +1,7 @@
 package suryam
 
+import com.suryam.util.Constants
+
 import java.text.SimpleDateFormat
 
 class DateTagLib {
@@ -8,6 +10,11 @@ class DateTagLib {
     //static encodeAsForTags = [tagName: [taglib:'html'], otherTagName: [taglib:'none']]
     def dob = {attrs ->
         if(attrs.value)
-            out << new SimpleDateFormat("dd/MM/yyyy").format(attrs.value)
+            out << new SimpleDateFormat(Constants.DOB_FORMAT).format(attrs.value)
+    }
+
+    def dateTime = {attrs ->
+        if(attrs.value)
+            out << new SimpleDateFormat(Constants.DATE_TIME_FORMAT).format(attrs.value)
     }
 }

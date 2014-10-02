@@ -8,4 +8,6 @@ package com.suryam.util
  */
 class Constants {
     static final int DEFAULT_MAX_PAGE_SIZE=10
+    static final String DOB_FORMAT="dd/MM/yyyy"
+    static final String DATE_TIME_FORMAT="dd/MM/yyyy HH:mm"
 }

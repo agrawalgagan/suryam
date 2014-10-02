@@ -16,6 +16,8 @@ class Patient {
     String phone
     String email
 
+    static hasMany = [visits : PatientVisit]
+
     static mapping = {
         firstName index:"firstName_idx"
         lastName index:"lastName_idx"
