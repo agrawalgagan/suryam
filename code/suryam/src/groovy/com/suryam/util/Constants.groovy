@@ -10,4 +10,5 @@ class Constants {
     static final int DEFAULT_MAX_PAGE_SIZE=10
     static final String DOB_FORMAT="dd/MM/yyyy"
     static final String DATE_TIME_FORMAT="dd/MM/yyyy HH:mm"
+    static final String DATE_TIME_PICKER_FORMAT="d/m/Y H:i"
 }

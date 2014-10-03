@@ -135,6 +135,9 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+	'/**/favicon.ico':                ['permitAll'],
+    '/plugins/jquery-ui-1.10.4/jquery-ui/themes/ui-lightness/jquery-ui-1.10.4.custom.css' : ['permitAll']
 ]
 grails.plugin.springsecurity.logout.postOnly=false
+grails.databinding.dateFormats = [
+        'dd/MM/yyyy HH:mm', 'dd/MM/yyyy']

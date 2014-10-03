@@ -62,6 +62,7 @@
             <g:sortableColumn property="dob" title="${message(code: 'patient.dob.label')}" />
             <g:sortableColumn property="phone" title="${message(code: 'patient.phone.label', default: 'Phone')}" />
             <g:sortableColumn property="email" title="${message(code: 'patient.email.label')}" />
+            <th><g:message code="patientVisit.list.label"/></th>
 
         </tr>
         </thead>
@@ -74,6 +75,7 @@
                 <td><sur:dob value="${patientInstance?.dob}"/></td>
                 <td>${fieldValue(bean: patientInstance, field: "phone")}</td>
                 <td>${fieldValue(bean: patientInstance, field: "email")}</td>
+                <td><g:link class="list" controller="patientVisit" action="list" id="${patientInstance?.id}">visits</g:link></td>
 
             </tr>
         </g:each>

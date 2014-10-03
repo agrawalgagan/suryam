@@ -12,11 +12,11 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create" params="['patient.id':patientId]"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create" params="['patient.id':patient?.id]"><g:message code="patientVisit.new.label"/></g:link></li>
 			</ul>
 		</div>
 		<div id="list-patientVisit" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<g:link controller="patient" action="show" id="${patient.id}"><h1>${patient?.name}</h1></g:link>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -50,9 +50,9 @@
 
                         <td><sur:dateTime value="${patientVisitInstance.reportTime}"/></td>
 
-                        <td>${fieldValue(bean: patientVisitInstance, field: "status")}</td>
+                        <td><g:message code="patientVisit.status.${patientVisitInstance.status}"/></td>
 
-                        <td><g:link action="show" id="${patientVisitInstance.id}">Edit</g:link></td>
+                        <td><g:link action="edit" id="${patientVisitInstance.id}">Edit</g:link></td>
 					
 					</tr>
 				</g:each>

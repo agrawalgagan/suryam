@@ -18,8 +18,7 @@
 		<g:message code="patientVisit.appointmentTime.label" default="Appointment Time" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="appointmentTime" precision="day"  value="${patientVisitInstance?.appointmentTime}"  />
-
+    <sur:dateTimePicker name="appointmentTime" value="${patientVisitInstance?.appointmentTime}" required="true"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'arrivalTime', 'error')} required">
@@ -27,7 +26,8 @@
 		<g:message code="patientVisit.arrivalTime.label" default="Arrival Time" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="arrivalTime" precision="day"  value="${patientVisitInstance?.arrivalTime}"  />
+	%{--<g:datePicker name="arrivalTime" precision="day"  value="${patientVisitInstance?.arrivalTime}"  />--}%
+    <sur:dateTimePicker name="arrivalTime" value="${patientVisitInstance?.arrivalTime}" required="true"/>
 
 </div>
 
@@ -38,15 +38,16 @@
 		<g:message code="patientVisit.referringDoctor.label" default="Referring Doctor" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="referringDoctor" name="referringDoctor.id" from="${com.suryam.domain.Doctor.list()}" optionKey="id" optionValue="name" required="" value="${patientVisitInstance?.referringDoctor?.id}" class="many-to-one"/>
+	<g:select id="referringDoctor" name="referringDoctor.id" from="${com.suryam.domain.Doctor.list()}" optionKey="id" optionValue="name" noSelection="['' : '--Select--']" required="" value="${patientVisitInstance?.referringDoctor?.id}" class="many-to-one"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'reportTime', 'error')} ">
+%{--<div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'reportTime', 'error')} ">
     <label for="reportTime">
         <g:message code="patientVisit.reportTime.label" default="Report Time" />
 
     </label>
-    <g:datePicker name="reportTime" precision="day"  value="${patientVisitInstance?.reportTime}" default="none" noSelection="['': '']" />
+    --}%%{--<g:datePicker name="reportTime" precision="day"  value="${patientVisitInstance?.reportTime}" default="none" noSelection="['': '']" />--}%%{--
+    <sur:dateTimePicker name="reportTime"/>
 
-</div>
+</div>--}%

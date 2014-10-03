@@ -17,7 +17,12 @@ class PatientVisitController {
     }
 
     def list(Patient patient) {
-        respond patient.visits, model: [patientVisitInstanceList:patient.visits, patientVisitInstanceCount: patient.visits.size(), patientId : patient.id]
+        if(!params.sort){
+            params.sort = "appointmentTime"
+            params.order = "desc"
+        }
+        def patientVisits = PatientVisit.findAllByPatient(patient, params)
+        respond patientVisits, model: [patientVisitInstanceList:patientVisits, patientVisitInstanceCount: patientVisits.size(), patient : patient], view:"list"
     }
 
     def show(PatientVisit patientVisitInstance) {
@@ -43,14 +48,14 @@ class PatientVisitController {
         }
 
         patientVisitInstance.save flush: true
-
-        request.withFormat {
+        list(patientVisitInstance.patient)
+        /*request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'patientVisit.label', default: 'PatientVisit'), patientVisitInstance.id])
                 redirect patientVisitInstance
             }
             '*' { respond patientVisitInstance, [status: CREATED] }
-        }
+        }*/
     }
 
     @Secured(['ROLE_PATIENT_WRITE'])

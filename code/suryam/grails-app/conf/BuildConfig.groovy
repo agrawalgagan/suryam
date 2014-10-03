@@ -67,6 +67,7 @@ grails.project.dependency.resolution = {
         runtime ":hibernate4:4.3.5.5" // or ":hibernate:3.6.10.17"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
+        //runtime ':resources:1.2.9'
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"
@@ -78,5 +79,6 @@ grails.project.dependency.resolution = {
         compile ":jquery-ui:1.10.4"
         compile ":famfamfam:1.0.1"
         compile ":spring-security-ui:1.0-RC2"
+        //compile ':jquery-date-time-picker:0.2.0'
     }
 }
