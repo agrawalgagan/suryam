@@ -141,3 +141,4 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 grails.plugin.springsecurity.logout.postOnly=false
 grails.databinding.dateFormats = [
         'dd/MM/yyyy HH:mm', 'dd/MM/yyyy']
+application.timezone = 'Asia/Kolkata'

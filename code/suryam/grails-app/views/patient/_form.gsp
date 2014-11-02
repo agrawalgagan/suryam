@@ -32,7 +32,7 @@
         <g:message code="patient.gender.label" default="Gender" />
         <span class="required-indicator">*</span>
     </label>
-    <g:select name="gender" from="${com.suryam.domain.Gender?.values()}" keys="${com.suryam.domain.Gender.values()*.name()}" required="" value="${patientInstance?.gender?.name()}" />
+    <g:select name="gender" from="${com.suryam.domain.Gender?.values()}" keys="${com.suryam.domain.Gender.values()*.name()}" noSelection="['':'--Select--']" required="" value="${patientInstance?.gender?.name()}" />
 
 </div>
 
@@ -41,7 +41,8 @@
 		<g:message code="patient.dob.label" default="Dob" />
 		
 	</label>
-	<g:datePicker name="dob" precision="day"  value="${patientInstance?.dob}" default="none" noSelection="['': '']" />
+	%{--<g:datePicker name="dob" precision="day"  value="${patientInstance?.dob}" default="none" noSelection="['': '']" />--}%
+    <sur:datePicker name="dob"/>
 
 </div>
 

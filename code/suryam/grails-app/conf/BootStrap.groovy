@@ -1,6 +1,8 @@
 import com.suryam.domain.Doctor
 import com.suryam.domain.Gender
 import com.suryam.domain.Patient
+import com.suryam.domain.Study
+import com.suryam.domain.StudyType
 import com.suryam.domain.admin.Role
 import com.suryam.domain.admin.RoleGroup
 import com.suryam.domain.admin.RoleGroupRole
@@ -9,8 +11,9 @@ import com.suryam.domain.admin.UserRole
 import com.suryam.domain.admin.UserRoleGroup
 
 class BootStrap {
-
+    def grailsApplication
     def init = { servletContext ->
+        TimeZone.setDefault(TimeZone.getTimeZone(grailsApplication.config.application.timezone))
         def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
         def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
 
@@ -32,6 +35,7 @@ class BootStrap {
         UserRoleGroup.create(testUser,adminGroup,true)
         addDoctors()
         addPatients()
+        //addStudies()
     }
 
     private void addPatients() {
@@ -53,6 +57,18 @@ class BootStrap {
                 new Doctor(name: "Doctor${i}", dob: new Date(), phone: "${i}${i}${i}${i}${i}", address: "Gujarat").save(flush: true)
             }
         }
+    }
+
+    private void addStudies(){
+
+        Study mri = Study.findAllByNameAndParent("MRI",null) ?: new Study(name:"MRI",type: StudyType.CATEGORY).save(flush: true)
+        Study ct = Study.findAllByNameAndParent("CT",null) ?: new Study(name:"CT", type: StudyType.CATEGORY).save(flush: true)
+
+        new Study(name:"BRAIN", type: StudyType.PART, parent: mri, cost: 100.0f).save(flush: true)
+        new Study(name:"PELVIS", type: StudyType.PART, parent: mri, cost: 101.0f).save(flush: true)
+        new Study(name:"NECK", type: StudyType.PART, parent: mri, cost: 102.0f).save(flush: true)
+        new Study(name:"THORAX", type: StudyType.PART, parent: mri, cost: 103.0f).save(flush: true)
+
     }
 
     def destroy = {

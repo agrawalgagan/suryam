@@ -42,6 +42,21 @@
 
 </div>
 
+<div class="fieldcontain">
+    <label for="referringDoctor">
+        <g:message code="patientVisit.study.label" default="Studies" />
+        <span class="required-indicator">*</span>
+    </label>
+    <g:each in="${com.suryam.domain.Study.getRootStudies()}">
+        <div>${it.name}</div>
+        %{--<g:each in="${it.childStudies}" var="child">
+            <div>${child.name}</div>
+        </g:each>--}%
+
+    </g:each>
+
+</div>
+
 %{--<div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'reportTime', 'error')} ">
     <label for="reportTime">
         <g:message code="patientVisit.reportTime.label" default="Report Time" />

@@ -37,4 +37,24 @@ class DateTagLib {
 
         out << str
     }
+
+    def datePicker = {attrs->
+        String name = attrs.name
+        String id = attrs.id ? attrs.id : name
+        String required = attrs.required ? "required" : ""
+        def value = attrs.value? DateUtil.format(attrs.value, Constants.DATE_FORMAT) : ""
+        String str = """
+            <script>
+            \$(function(){
+                \$("#${id}").datetimepicker({
+                    format : 'd/m/Y',
+                    timepicker : false
+                })
+            })
+            </script>
+            <input type="text" name="${name}" id="${id}" value="${value}" ${required}/>
+        """
+
+        out << str
+    }
 }

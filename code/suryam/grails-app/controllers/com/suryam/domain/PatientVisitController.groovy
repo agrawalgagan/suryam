@@ -49,13 +49,6 @@ class PatientVisitController {
 
         patientVisitInstance.save flush: true
         list(patientVisitInstance.patient)
-        /*request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'patientVisit.label', default: 'PatientVisit'), patientVisitInstance.id])
-                redirect patientVisitInstance
-            }
-            '*' { respond patientVisitInstance, [status: CREATED] }
-        }*/
     }
 
     @Secured(['ROLE_PATIENT_WRITE'])
