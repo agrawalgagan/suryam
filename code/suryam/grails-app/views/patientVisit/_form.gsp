@@ -1,3 +1,4 @@
+<%@page import="com.suryam.domain.VisitStatus"%>
 <%@ page import="com.suryam.domain.PatientVisit" %>
 
 
@@ -11,7 +12,13 @@
 
 </div>
 
-
+<div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'status', 'error')} required">
+	<label for="status">
+		<g:message code="patientVisit.status.label" default="Status" />
+		<span class="required-indicator">*</span>
+	</label>
+    <g:select name="status" from="${VisitStatus.values()}" value="${patientVisitInstance?.status}"/>
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'appointmentTime', 'error')} required">
 	<label for="appointmentTime">
@@ -47,14 +54,14 @@
         <g:message code="patientVisit.study.label" default="Studies" />
         <span class="required-indicator">*</span>
     </label>
-    <g:each in="${com.suryam.domain.Study.getRootStudies()}">
-        <div>${it.name}</div>
-        %{--<g:each in="${it.childStudies}" var="child">
-            <div>${child.name}</div>
-        </g:each>--}%
-
-    </g:each>
-
+    <div class="studies">
+	    <g:each in="${com.suryam.domain.Study.getRootStudies()}">
+	        <div><b>${it.name}</b></div>
+	        <g:each in="${it.childStudies}" var="child">
+	            <div class="substudies"><g:checkBox name="studys" value="${child.id}" checked="${patientVisitInstance?.studies?.id?.contains(child.id)}"/> ${child.name}</div>
+	        </g:each>
+	    </g:each>
+	</div>
 </div>
 
 %{--<div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'reportTime', 'error')} ">

@@ -18,6 +18,11 @@ class Study {
     }
 
     List<Study> getChildStudies(){
-        return Study.findAllByParent(this, sort : ["type","name"])
+        return Study.findAllByParent(this, [sort : "name"])
     }
+	
+	String getDisplayName(){
+		String n = parent ? parent.displayName+"->" : ""
+		return n+name
+	}
 }

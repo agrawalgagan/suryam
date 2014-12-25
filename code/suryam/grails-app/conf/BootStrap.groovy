@@ -35,7 +35,7 @@ class BootStrap {
         UserRoleGroup.create(testUser,adminGroup,true)
         addDoctors()
         addPatients()
-        //addStudies()
+        addStudies()
     }
 
     private void addPatients() {
@@ -61,13 +61,23 @@ class BootStrap {
 
     private void addStudies(){
 
-        Study mri = Study.findAllByNameAndParent("MRI",null) ?: new Study(name:"MRI",type: StudyType.CATEGORY).save(flush: true)
-        Study ct = Study.findAllByNameAndParent("CT",null) ?: new Study(name:"CT", type: StudyType.CATEGORY).save(flush: true)
+        Study mri = Study.findByNameAndParent("MRI",null) ?: new Study(name:"MRI",type: StudyType.CATEGORY).save(flush: true)
+        Study ct = Study.findByNameAndParent("CT",null) ?: new Study(name:"CT", type: StudyType.CATEGORY).save(flush: true)
 
         new Study(name:"BRAIN", type: StudyType.PART, parent: mri, cost: 100.0f).save(flush: true)
-        new Study(name:"PELVIS", type: StudyType.PART, parent: mri, cost: 101.0f).save(flush: true)
-        new Study(name:"NECK", type: StudyType.PART, parent: mri, cost: 102.0f).save(flush: true)
-        new Study(name:"THORAX", type: StudyType.PART, parent: mri, cost: 103.0f).save(flush: true)
+		new Study(name:"CERVICAL SPINE", type: StudyType.PART, parent: mri, cost: 100.0f).save(flush: true)
+        new Study(name:"LUMBAR SPINE", type: StudyType.PART, parent: mri, cost: 101.0f).save(flush: true)
+        new Study(name:"PELVIS", type: StudyType.PART, parent: mri, cost: 102.0f).save(flush: true)
+        new Study(name:"SCREENING WHOLE SPINE", type: StudyType.PART, parent: mri, cost: 103.0f).save(flush: true)
+		new Study(name:"SPECTROSCOPY", type: StudyType.PART, parent: mri, cost: 103.0f).save(flush: true)
+		new Study(name:"MRCP", type: StudyType.PART, parent: mri, cost: 103.0f).save(flush: true)
+		
+		new Study(name:"BRAIN", type: StudyType.PART, parent: ct, cost: 103.0f).save(flush: true)
+		new Study(name:"NECK", type: StudyType.PART, parent: ct, cost: 103.0f).save(flush: true)
+		new Study(name:"THORAX", type: StudyType.PART, parent: ct, cost: 103.0f).save(flush: true)
+		new Study(name:"ABDOMEN", type: StudyType.PART, parent: ct, cost: 103.0f).save(flush: true)
+		new Study(name:"PELVIS", type: StudyType.PART, parent: ct, cost: 103.0f).save(flush: true)
+		new Study(name:"JOINTS", type: StudyType.PART, parent: ct, cost: 103.0f).save(flush: true)
 
     }
 

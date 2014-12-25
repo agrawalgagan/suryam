@@ -29,6 +29,8 @@
                         <g:sortableColumn property="arrivalTime" title="${message(code: 'patientVisit.arrivalTime.label', default: 'Arrival Time')}" />
 
 						<th><g:message code="patientVisit.referringDoctor.label" default="Referring Doctor" /></th>
+						
+						<th><g:message code="patientVisit.studies.label" default="Referring Doctor" /></th>
 
                         <g:sortableColumn property="reportTime" title="${message(code: 'patientVisit.reportTime.label', default: 'Report Time')}" />
 
@@ -47,6 +49,12 @@
 						<td><sur:dateTime value="${patientVisitInstance.arrivalTime}" /></td>
 					
 						<td>${fieldValue(bean: patientVisitInstance, field: "referringDoctor.name")}</td>
+						
+						<td>
+							<g:each in="${patientVisitInstance.studies}" var="study">
+								<div>${study.displayName}</div>
+							</g:each> 
+						</td>
 
                         <td><sur:dateTime value="${patientVisitInstance.reportTime}"/></td>
 

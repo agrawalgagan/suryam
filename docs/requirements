@@ -1,0 +1,15 @@
+Study Completed (exported hours for report)
+Report Generated
+
+weekly/monthly report
+	input
+		--doctor
+		--from to date
+	output
+		view 1
+		--patient handled with details on study and amount
+		view 2 
+		--study wise breakup - no. of patient
+		--study wise breakup - amount paid
+		--total discount
+		--

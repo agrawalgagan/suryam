@@ -11,3 +11,10 @@
 *= require mobile
 *= require_self
 */
+.studies {
+	padding-left: 170pt;	
+}
+
+.substudies{
+	padding-left: 10pt;
+}

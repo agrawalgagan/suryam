@@ -7,5 +7,6 @@ package com.suryam.domain
  * Time: 3:00 PM
  */
 public enum VisitStatus {
-    APPOINTMENT_TAKEN
+    APPOINTMENT_TAKEN,
+	REPORTED
 }

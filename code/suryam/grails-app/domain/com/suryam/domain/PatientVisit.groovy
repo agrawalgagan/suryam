@@ -7,7 +7,7 @@ class PatientVisit {
     Doctor referringDoctor
     Date reportTime
     VisitStatus status = VisitStatus.APPOINTMENT_TAKEN
-
+ 
     static belongsTo = [patient : Patient]
     static hasMany = [studies : Study]
 

@@ -46,10 +46,22 @@ class PatientVisitController {
             respond patientVisitInstance.errors, view: 'create'
             return
         }
-
+		setStudies(params, patientVisitInstance)
+		
         patientVisitInstance.save flush: true
         list(patientVisitInstance.patient)
     }
+
+	private setStudies(Map params, PatientVisit patientVisitInstance) {
+		if(params.studys!=null){
+			params.studys.each{
+				Study study = Study.get(it)
+				if(study!=null){
+					patientVisitInstance.addToStudies(study)
+				}
+			}
+		}
+	}
 
     @Secured(['ROLE_PATIENT_WRITE'])
     def edit(PatientVisit patientVisitInstance) {
@@ -69,15 +81,18 @@ class PatientVisitController {
             return
         }
 
+		patientVisitInstance.studies.clear()
+		setStudies(params, patientVisitInstance)
         patientVisitInstance.save flush: true
+		list(patientVisitInstance.patient)
 
-        request.withFormat {
+        /*request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'PatientVisit.label', default: 'PatientVisit'), patientVisitInstance.id])
                 redirect patientVisitInstance
             }
             '*' { respond patientVisitInstance, [status: OK] }
-        }
+        }*/
     }
 
     @Transactional
