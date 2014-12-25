@@ -58,10 +58,39 @@
 	    <g:each in="${com.suryam.domain.Study.getRootStudies()}">
 	        <div><b>${it.name}</b></div>
 	        <g:each in="${it.childStudies}" var="child">
-	            <div class="substudies"><g:checkBox name="studys" value="${child.id}" checked="${patientVisitInstance?.studies?.id?.contains(child.id)}"/> ${child.name}</div>
+	            <div class="substudies"><g:checkBox name="studys" value="${child.id}" checked="${patientVisitInstance?.studies?.id?.contains(child.id)}"/> 
+	            	${child.name} <i>(Rs. ${child.cost})</i>
+	            </div>
 	        </g:each>
 	    </g:each>
 	</div>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'discount', 'error')}">
+	<label for="discount">
+		<g:message code="patientVisit.discount.label" default="Discount" />
+	</label>
+    <g:textField name="discount" value="${patientVisitInstance?.discount}"/>
+</div>
+<div class="fieldcontain">
+	<label for="totalCost">
+		<g:message code="patientVisit.totalCost.label" default="Total Cost" />
+	</label>
+    <span id="totalCost">Rs. ${patientVisitInstance?.totalCost}</span>
+</div>
+
+<div class="fieldcontain">
+	<label for="amountPaid">
+		<g:message code="patientVisit.amountPaid.label" default="Amount Paid" />
+	</label>
+    <g:textField name="amountPaid" value="${patientVisitInstance?.amountPaid}"/>
+</div>
+
+<div class="fieldcontain">
+	<label for="amountPending">
+		<g:message code="patientVisit.amountPending.label" default="Amount Pending" />
+	</label>
+    <span>Rs. ${patientVisitInstance?.amountPending}</span>
 </div>
 
 %{--<div class="fieldcontain ${hasErrors(bean: patientVisitInstance, field: 'reportTime', 'error')} ">
