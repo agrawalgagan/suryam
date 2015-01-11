@@ -58,7 +58,7 @@
 	    <g:each in="${com.suryam.domain.Study.getRootStudies()}">
 	        <div><b>${it.name}</b></div>
 	        <g:each in="${it.childStudies}" var="child">
-	            <div class="substudies"><g:checkBox name="studys" value="${child.id}" checked="${patientVisitInstance?.studies?.id?.contains(child.id)}"/> 
+	            <div class="substudies"><g:checkBox name="studys" value="${child.id}" checked="${patientVisitInstance?.visitStudies?.study?.id?.contains(child.id)}"/> 
 	            	${child.name} <i>(Rs. ${child.cost})</i>
 	            </div>
 	        </g:each>

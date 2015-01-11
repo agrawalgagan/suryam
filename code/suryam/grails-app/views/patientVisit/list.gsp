@@ -51,8 +51,8 @@
 						<td>${fieldValue(bean: patientVisitInstance, field: "referringDoctor.name")}</td>
 						
 						<td>
-							<g:each in="${patientVisitInstance.studies}" var="study">
-								<div>${study.displayName}</div>
+							<g:each in="${patientVisitInstance.visitStudies}" var="study">
+								<div>${study.study.displayName}</div>
 							</g:each> 
 						</td>
 

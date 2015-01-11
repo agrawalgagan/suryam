@@ -9,14 +9,14 @@ class PatientVisit {
     Doctor referringDoctor
     Date reportTime
     VisitStatus status = VisitStatus.APPOINTMENT_TAKEN
-	Float discount
+	Float discount = 0.0
 	@Transient
-	Float totalCost
-	Float amountPaid
-	Float amountPending
+	Float totalCost = 0.0
+	Float amountPaid = 0.0
+	Float amountPending = 0.0
  
     static belongsTo = [patient : Patient]
-    static hasMany = [studies : Study]
+    static hasMany = [visitStudies : PatientVisitStudy]
 	
 	static transients = ["totalCost","amountPending"]
 
@@ -26,9 +26,9 @@ class PatientVisit {
 	
 	Float getTotalCost(){
 		Float total = 0.0
-		if(studies!=null){
-			for(Study study : studies){
-				total += study.cost
+		if(visitStudies!=null){
+			for(PatientVisitStudy visitStudy : visitStudies){
+				total += visitStudy.study.cost
 			}
 			total = total - discount
 		}

@@ -46,18 +46,18 @@ class PatientVisitController {
             respond patientVisitInstance.errors, view: 'create'
             return
         }
-		setStudies(params, patientVisitInstance)
+		setStudies(params.studys, patientVisitInstance)
 		
         patientVisitInstance.save flush: true
         list(patientVisitInstance.patient)
     }
 
-	private setStudies(Map params, PatientVisit patientVisitInstance) {
-		if(params.studys!=null){
-			params.studys.each{
+	private setStudies(def studys, PatientVisit patientVisitInstance) {
+		if(studys!=null){
+			studys.each{
 				Study study = Study.get(it)
 				if(study!=null){
-					patientVisitInstance.addToStudies(study)
+					patientVisitInstance.addToVisitStudies(new PatientVisitStudy(study : study, cost : study.cost))
 				}
 			}
 		}
@@ -81,8 +81,25 @@ class PatientVisitController {
             return
         }
 
-		patientVisitInstance.studies.clear()
-		setStudies(params, patientVisitInstance)
+		def existingStudies = []
+		def removedStudies = []
+		patientVisitInstance.visitStudies.each{
+			//existingStudyCostMap.put(it.study, it.study.cost)
+			if(!params.studys.contains(it.study)){
+				it.delete()
+				removedStudies << it
+				//patientVisitInstance.visitStudies.remove(it)
+			}	
+			else
+				existingStudies << it.study
+		}
+		removedStudies.each {
+			patientVisitInstance.visitStudies.remove(it)
+		}
+		def newStudies = params.studys.minus(existingStudies)
+		//patientVisitInstance.visitStudies.clear()
+		//patientVisitInstance.save flush: true
+		setStudies(newStudies, patientVisitInstance)
         patientVisitInstance.save flush: true
 		list(patientVisitInstance.patient)
 
