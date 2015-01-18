@@ -8,5 +8,7 @@ package com.suryam.domain
  */
 public enum VisitStatus {
     APPOINTMENT_TAKEN,
-	REPORTED
+	ARRIVED,
+	COMPLETED,
+	REPORT_GENERATED
 }

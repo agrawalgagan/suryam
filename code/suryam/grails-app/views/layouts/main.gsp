@@ -16,6 +16,7 @@
         <asset:stylesheet src="jquery-plugins/jquery.datetimepicker.css"/>
 		<asset:javascript src="application.js"/>
         <asset:javascript src="jquery-plugins/jquery.datetimepicker.js"/>
+        <asset:javascript src="jquery-plugins/jquery.float.js"/>
         <jqui:resources/>
 		<g:layoutHead/>
 	</head>
